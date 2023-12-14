@@ -29,7 +29,7 @@ For Each ws In Worksheets
                         total_volume = total_volume + ws.Cells(i, 7).Value
                     End If
             Next i
-        ws.Range("J:J").FormatConditions.Delete
+        ws.Range("J:K").FormatConditions.Delete
         ws.Range("J2:J" & summary_row - 1).FormatConditions.Add(Type:=xlCellValue, Operator:=xlGreaterEqual, Formula1:=0).Interior.ColorIndex = 4
         ws.Range("J2:J" & summary_row - 1).FormatConditions.Add(Type:=xlCellValue, Operator:=xlLess, Formula1:=0).Interior.ColorIndex = 3
         ws.Range("K2:K" & summary_row - 1).FormatConditions.Add(Type:=xlCellValue, Operator:=xlGreaterEqual, Formula1:=0).Interior.ColorIndex = 4
